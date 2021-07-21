@@ -1,0 +1,132 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Wearables</mat-card-title>
+            </mat-card-content>
+            <mat-tab-group class="demo-tab-group">
+                <mat-tab label="Fitbit">
+                    <div class="demo-tab-content">
+                        <div fxLayout="row wrap">
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <h6 style="color: #3AA748">Da de alta tu modelo de Fitbit</h6>
+                                <mat-form-field>
+
+                                    <mat-select placeholder="Modelo">
+                                        <mat-option value="option">Fitbit Blaze</mat-option>
+                                        <mat-option value="option">Fitbit Charge 3</mat-option>
+                                        <mat-option value="option">Fitbit Versa</mat-option>
+                                        <mat-option value="option">Fitbit Ace</mat-option>
+                                        <mat-option value="option">Fitbit Ionic</mat-option>
+                                        <mat-option value="option">Fitbit Aria 2</mat-option>
+                                        <mat-option value="option">Fitbit Alta HR</mat-option>
+                                        <mat-option value="option">Fitbit Flex</mat-option>
+                                        <mat-option value="option">Fitbit Alta</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Ingrese el Id Fitbit Cliente">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <button mat-raised-button color="primary">Agregar</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </mat-tab>
+                <mat-tab label="Google Fit">
+                    <div class="demo-tab-content">
+                        En este apartado va la sincronización de google fit
+                    </div>
+                </mat-tab>
+                <mat-tab label="Polar">
+                    <div class="demo-tab-content">
+                        <div fxLayout="row wrap">
+                            <h6 style="color: #3AA748">Datos polar</h6>
+                            <mat-form-field>
+
+                                <mat-select placeholder="Modelo">
+                                    <mat-option value="option">Polar M600</mat-option>
+                                    <mat-option value="option">Polar A360</mat-option>
+                                    <mat-option value="option">Polar M200</mat-option>
+                                    <mat-option value="option">Polar A300</mat-option>
+                                    <mat-option value="option">Polar V800</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <mat-label>Monitorización del sueño</mat-label>
+                                    <input matInput placeholder="Horas dormidas por día">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <mat-label>Ritmo Cardíaco</mat-label>
+                                    <input matInput placeholder="Frecuencia cardíaca lpm">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <mat-label>Contador de pasos</mat-label>
+                                    <input matInput placeholder="Pasos recorridos">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Minutos de actividad">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Minutos de inactividad">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Distancia recorrida en km">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Calorías quemadas">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <mat-form-field>
+                                    <input matInput placeholder="Plantas subidas">
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                <button mat-raised-button color="primary">Agregar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </mat-tab>
+
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>

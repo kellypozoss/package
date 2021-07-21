@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content>
+        <div id="chart" class="d-flex flex-column"></div>
+        <div fxLayout="row wrap">
+            <div fxFlex.gt-sm="50" fxFlex.gt-xs="300" fxFlex="700">
+                <mat-card>
+
+                    <mat-card-title>Presión arterial</mat-card-title>
+                    <canvas baseChart height="530" [datasets]="lineChartData" [labels]="lineChartLabels"
+                        [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                        [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)">
+                    </canvas>
+
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

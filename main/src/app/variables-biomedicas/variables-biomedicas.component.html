@@ -1,0 +1,98 @@
+<!-- ============================================================== -->
+<!-- Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Column-->
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <h4>Recuperados de los wearables</h4>
+
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Frecuencia cardíaca</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Column-->
+
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <h4>Recuperados de los análisis clínicos</h4>
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Triglicéridos</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Column-->
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Presión arterial</mat-card-title>
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Column-->
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Colesterol</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Column-->
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Temperatura corporal (°C)</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Column-->
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Glucosa</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>SPO2</mat-card-title>
+
+                <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
