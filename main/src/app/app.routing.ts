@@ -6,6 +6,12 @@ import { DatosMedicosComponent } from './datos-medicos/datos-medicos.component';
 import { MisPronosticosComponent } from './mis-pronosticos/mis-pronosticos.component';
 import { VariablesBiomedicasComponent } from './variables-biomedicas/variables-biomedicas.component';
 import { GeneratePdfComponent } from './generate-pdf/generate-pdf.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { CardiovascularComponent } from './cardiovascular/cardiovascular.component';
+import { DiabetesComponent } from './diabetes/diabetes.component';
+import { HipertensionComponent } from './hipertension/hipertension.component';
 
 
 export const AppRoutes: Routes = [
@@ -22,6 +28,11 @@ export const AppRoutes: Routes = [
             {
                 path: 'dashboard',
                 redirectTo: '/dashboards/dashboard1',
+                pathMatch: 'full'
+            },
+            {
+                path: 'dashboard2',
+                redirectTo: '/dashboards/dashboard2',
                 pathMatch: 'full'
             },
             {
@@ -71,6 +82,66 @@ export const AppRoutes: Routes = [
                     urls: [
                         { title: 'Dashboard', url: '/dashboard' },
                         { title: 'Pronóstico' }
+                    ]
+                }
+            },
+            {
+                path: 'usuarios', component: UsuariosComponent,
+                data: {
+                    title: 'Mis pacientes',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Mis pacientes' }
+                    ]
+                }
+            },
+            {
+                path: 'medicos', component: MedicosComponent,
+                data: {
+                    title: 'Médicos',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Médicos' }
+                    ]
+                }
+            },
+            {
+                path: 'hospitales', component: HospitalesComponent,
+                data: {
+                    title: 'Hospitales',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Hospitales' }
+                    ]
+                }
+            },
+            {
+                path: 'cardiovascular', component: CardiovascularComponent,
+                data: {
+                    title: 'Enfermedades cardiovasculares',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Enfermedades cardiovasculares' }
+                    ]
+                }
+            },
+            {
+                path: 'diabetes', component: DiabetesComponent,
+                data: {
+                    title: 'Diabetes',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Diabetes' }
+                    ]
+                }
+            },
+            {
+                path: 'hipertension', component: HipertensionComponent,
+                data: {
+                    title: 'Hipertensión',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard2' },
+                        { title: 'Hipertensión' }
                     ]
                 }
             },

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+
+th {
+    width: 20%;
+}
+
+td {
+    width: 20%;
+    height: 20%;
+}
+
+.pointer{
+    cursor: pointer;
+}
+.example-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

@@ -19,6 +19,9 @@ import { VerticalAppSidebarComponent } from './layouts/full/vertical-sidebar/ver
 import { HorizontalAppHeaderComponent } from './layouts/full/horizontal-header/horizontal-header.component';
 import { HorizontalAppSidebarComponent } from './layouts/full/horizontal-sidebar/horizontal-sidebar.component';
 
+import { HorizontalMedicoComponent } from './layouts/full/horizontal-medico/horizontal-medico.component';
+import { VerticalMedicoComponent } from './layouts/full/vertical-medico/vertical-medico.component';
+
 import { AppBreadcrumbComponent } from './layouts/full/breadcrumb/breadcrumb.component';
 
 
@@ -53,6 +56,12 @@ import { GeneratePdfComponent } from './generate-pdf/generate-pdf.component';
 
 import { PdfMakeWrapper } from 'pdfmake-wrapper';
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { CardiovascularComponent } from './cardiovascular/cardiovascular.component';
+import { DiabetesComponent } from './diabetes/diabetes.component';
+import { HipertensionComponent } from './hipertension/hipertension.component';
 
 PdfMakeWrapper.setFonts(pdfFonts);
 
@@ -92,7 +101,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         AgregarWearableComponent,
         MisPronosticosComponent,
         DetalleVariableComponent,
-        GeneratePdfComponent
+        GeneratePdfComponent,
+        HorizontalMedicoComponent,
+        VerticalMedicoComponent,
+        UsuariosComponent,
+        MedicosComponent,
+        HospitalesComponent,
+        CardiovascularComponent,
+        DiabetesComponent,
+        HipertensionComponent
 
     ],
     imports: [

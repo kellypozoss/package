@@ -7,7 +7,7 @@ import {
 	OnInit
 } from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
-
+import { MenuItemsMedico } from 'src/app/shared/menu-items/menu-items-medico';
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 
@@ -29,7 +29,7 @@ export class FullComponent implements OnDestroy {
 	green = false;
 	blue = false;
 	danger = false;
-	showHide = false; 
+	showHide = false;
 	url = '';
 	sidebarOpened = false;
 	status = false;
@@ -43,7 +43,8 @@ export class FullComponent implements OnDestroy {
 		public router: Router,
 		changeDetectorRef: ChangeDetectorRef,
 		media: MediaMatcher,
-		public menuItems: MenuItems
+		public menuItems: MenuItems,
+		public menuItemsMedico: MenuItemsMedico
 	) {
 		this.mobileQuery = media.matchMedia('(min-width: 1023px)');
 		this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -67,7 +68,7 @@ export class FullComponent implements OnDestroy {
 	}
 
 	clickEvent(): void {
-		 this.status = !this.status;
+		this.status = !this.status;
 	}
 
 	darkClick() {
