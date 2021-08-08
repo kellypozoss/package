@@ -5,6 +5,8 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { MedicoLoginComponent } from './medico-login/medico-login.component';
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
@@ -26,8 +28,16 @@ export const AuthenticationRoutes: Routes = [
         component: LoginComponent
       },
       {
+        path: 'medico-login',
+        component: MedicoLoginComponent
+      },
+      {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'inicio',
+        component: InicioComponent
       }
     ]
   }

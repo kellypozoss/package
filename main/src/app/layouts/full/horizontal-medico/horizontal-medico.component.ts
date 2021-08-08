@@ -25,7 +25,7 @@ export class HorizontalMedicoComponent implements OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: HorizontalMenuMedico
+    public menuItemsMedico: HorizontalMenuMedico
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 1024px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

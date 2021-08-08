@@ -63,7 +63,7 @@ export class VerticalAppSidebarComponent implements OnDestroy {
   }
 
   handleNotify() {
-    if(window.innerWidth < 1024){
+    if (window.innerWidth < 1024) {
       this.notify.emit(!this.showClass);
     }
   }

@@ -7,12 +7,15 @@ import {
   Validators
 } from '@angular/forms';
 
+
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-medico-login',
+  templateUrl: './medico-login.component.html',
+  styleUrls: ['./medico-login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class MedicoLoginComponent implements OnInit {
+
   public form: FormGroup = Object.create(null);
 
   constructor(private fb: FormBuilder,
@@ -33,6 +36,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.router.navigate(['/dashboards/dashboard1']);
+    this.router.navigate(['/dashboards/dashboard2']);
   }
 }

@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Dashboard1Component } from './dashboard1/dashboard1.component';
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
 
+
 import {
     TopCardComponent,
     SalesOverviewComponent,
@@ -45,7 +46,8 @@ import { EmpDialogComponent } from './dashboard-components/dashboard-emp/emp-dia
         NgApexchartsModule,
         RouterModule.forChild(DashboardsRoutes),
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+
     ],
     declarations: [
         Dashboard1Component,
@@ -67,6 +69,8 @@ import { EmpDialogComponent } from './dashboard-components/dashboard-emp/emp-dia
         MessageComponent,
         DashboardEmpComponent,
         EmpDialogComponent,
+
+
 
     ],
     entryComponents: [

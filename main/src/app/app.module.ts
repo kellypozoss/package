@@ -62,6 +62,7 @@ import { HospitalesComponent } from './hospitales/hospitales.component';
 import { CardiovascularComponent } from './cardiovascular/cardiovascular.component';
 import { DiabetesComponent } from './diabetes/diabetes.component';
 import { HipertensionComponent } from './hipertension/hipertension.component';
+import { InicioComponent } from './authentication/inicio/inicio.component';
 
 PdfMakeWrapper.setFonts(pdfFonts);
 
@@ -109,7 +110,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         HospitalesComponent,
         CardiovascularComponent,
         DiabetesComponent,
-        HipertensionComponent
+        HipertensionComponent,
+        InicioComponent
 
     ],
     imports: [

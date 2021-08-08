@@ -25,6 +25,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MedicoLoginComponent } from './medico-login/medico-login.component';
 
 @NgModule({
     imports: [
@@ -37,14 +38,16 @@ import { RegisterComponent } from './register/register.component';
         MatButtonModule,
         FlexLayoutModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+
     ],
     declarations: [
         ErrorComponent,
         ForgotComponent,
         LockscreenComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        MedicoLoginComponent
     ]
 })
 export class AuthenticationModule { }

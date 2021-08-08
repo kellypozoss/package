@@ -50,7 +50,7 @@ export class VerticalMedicoComponent implements OnDestroy {
 
   constructor(changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: MenuItemsMedico
+    public menuItemsMedico: MenuItemsMedico
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

@@ -47,8 +47,6 @@ const MENUITEMSMEDICO = [
         ]
     },
 
-
-
     {
         state: 'usuarios',
         name: 'Mis pacientes',

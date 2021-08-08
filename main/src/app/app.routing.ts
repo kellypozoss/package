@@ -19,12 +19,14 @@ export const AppRoutes: Routes = [
 
         path: '',
         component: FullComponent,
+
         children: [
             {
                 path: '',
-                redirectTo: '/dashboards/dashboard1',
+                redirectTo: '/authentication/inicio',
                 pathMatch: 'full'
             },
+
             {
                 path: 'dashboard',
                 redirectTo: '/dashboards/dashboard1',

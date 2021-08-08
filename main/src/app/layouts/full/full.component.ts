@@ -7,7 +7,7 @@ import {
 	OnInit
 } from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
-import { MenuItemsMedico } from 'src/app/shared/menu-items/menu-items-medico';
+import { MenuItemsMedico } from '../../shared/menu-items/menu-items-medico';
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 
