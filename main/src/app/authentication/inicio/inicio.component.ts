@@ -6,6 +6,7 @@ import { Component, OnInit, EventEmitter, Output, Input, OnDestroy } from '@angu
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnDestroy {
+
   @Input() showClass: boolean = false;
   @Output() notify: EventEmitter<boolean> = new EventEmitter<boolean>()
   constructor() { }

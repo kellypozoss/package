@@ -10,6 +10,8 @@ import { MenuItems } from '../../shared/menu-items/menu-items';
 import { MenuItemsMedico } from '../../shared/menu-items/menu-items-medico';
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
+import { LoginComponent } from '../../authentication/login/login.component';
+import { MedicoLoginComponent } from '../../authentication/medico-login/medico-login.component';
 
 /** @title Responsive sidenav */
 @Component({
@@ -18,6 +20,7 @@ import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-
 	styleUrls: []
 })
 export class FullComponent implements OnDestroy {
+
 	mobileQuery: MediaQueryList;
 
 	dir = 'ltr';
@@ -25,6 +28,8 @@ export class FullComponent implements OnDestroy {
 	minisidebar = false;
 	boxed = false;
 	horizontal = false;
+
+	//recuperar role del los logins
 
 	green = false;
 	blue = false;
@@ -54,6 +59,7 @@ export class FullComponent implements OnDestroy {
 		// const body = document.getElementsByTagName('body')[0];
 		// body.classList.toggle('dark');
 		this.dark = false;
+
 	}
 
 	ngOnDestroy(): void {
@@ -65,6 +71,7 @@ export class FullComponent implements OnDestroy {
 	ngOnInit() {
 		//const body = document.getElementsByTagName('body')[0];
 		// body.classList.add('dark');
+
 	}
 
 	clickEvent(): void {
@@ -84,6 +91,28 @@ export class FullComponent implements OnDestroy {
 		// this.dark = this.dark;
 	}
 
+	/* private expresion(menuItems: MenuItems, menuItemsMedico: MenuItemsMedico): boolean {
+		if (route = ['dashboards/dashboard1']) {
+			return this.role = true;
+		}
+		else if (route = ['dashboards/dashboard2']) {
+			{
+				return this.role = false;
+			}
+		} */
 
+
+	/* role(): boolean {
+		if (role == 'paciente') {
+			return this.role = true;
+		}
+		else {
+			return this.role = false;
+		}
+	} */
 
 }
+
+
+
+

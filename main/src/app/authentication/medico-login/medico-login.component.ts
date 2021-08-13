@@ -16,6 +16,7 @@ import {
 })
 export class MedicoLoginComponent implements OnInit {
 
+  role = 'medico';
   public form: FormGroup = Object.create(null);
 
   constructor(private fb: FormBuilder,

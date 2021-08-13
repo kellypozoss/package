@@ -1,3 +1,4 @@
+<html>
 <header>
     <mat-toolbar color="primary" class="topbar relative">
         <div class="w-100 fix-width-for-horizontal">
@@ -7,49 +8,51 @@
         </div>
     </mat-toolbar>
 </header>
+
+
+
 <section class="home-services text-center">
     <div class="container">
         <div fxLayout="row wrap">
             <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-                <mat-card>
-                    <mat-card-content>
-                        <h3 style="color:#3AA748"><b>INICIA SESIÓN COMO:</b></h3>
-                        <br />
-                        <div style="text-align:center;">
-                            <table style="margin: 0 auto;">
-                                <tbody>
-                                    <td>
-                                        <a class="pointer" routerLink="../medico-login" routerLinkActive="active">
+                <br />
+                <h3 style="color:#3AA748"><b>INICIA SESIÓN COMO:</b></h3>
+                <br />
+                <div style="text-align:center;">
+                    <table style="margin: 0 auto;">
+                        <tbody>
+                            <td>
+                                <a class="pointer" routerLink="../medico-login" routerLinkActive="active">
 
-                                            <img src="assets/images/users/medi1.jpg" alt="user" class="profile-pic"
-                                                width="150px" height="150px" style="border-radius:100px;"
-                                                (click)="handleNotify()">
+                                    <img src="assets/images/users/medi1.jpg" alt="user" class="profile-img"
+                                        width="150px" height="150px" style="border-radius:100px;"
+                                        (click)="handleNotify()">
 
-                                        </a>
-                                        <br />
-                                        <h3 style="color:#3AA748"><b>Médico</b></h3>
-                                    </td>
-
+                                </a>
+                                <br />
+                                <h3 style="color:#3AA748"><b>Médico</b></h3>
+                            </td>
 
 
-                                    <td>
-                                        <a class="pointer" routerLink="../login" routerLinkActive="active">
+                            <td>
+                                <a class="pointer" routerLink="../login" routerLinkActive="active">
 
-                                            <img src="assets/images/users/paci1.jpg" alt="user" class="profile-pic"
-                                                width="150px" height="150px" style="border-radius:100px;"
-                                                (click)="handleNotify()">
+                                    <img src="assets/images/users/paci1.jpg" alt="user" class="profile-img"
+                                        width="150px" height="150px" style="border-radius:100px;"
+                                        (click)="handleNotify()">
 
-                                        </a>
-                                        <br />
-                                        <h3 style="color:#3AA748"><b>Paciente</b></h3>
-                                    </td>
+                                </a>
+                                <br />
+                                <h3 style="color:#3AA748"><b>Paciente</b></h3>
+                            </td>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </mat-card-content>
-                </mat-card>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
+
+</html>

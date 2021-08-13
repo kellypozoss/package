@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  currentUserSubject: any;
+  currentUser: any;
 
- constructor() { }
+  constructor() { }
   readonly ISLOGGEDKEY = 'islogged';
   public urlUsuarioIntentaAcceder = '';
 
@@ -30,5 +33,11 @@ export class AuthService {
       return false;
     }
     return true;
+  }
+
+
+
+  getCurrentUser(): Observable<any> {
+    return this.currentUserSubject.asObservable();
   }
 }

@@ -64,7 +64,7 @@ const MENUITEMSMEDICO = [
     },
     {
 
-        state: 'cardiovasculares',
+        state: 'cardiovascular',
         name: 'Enfermedades cardiovasculares',
         type: 'link',
         icon: 'healing'

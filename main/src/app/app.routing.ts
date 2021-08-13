@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
+import { FullMedicoComponent } from './layouts/full/full-medico.component';
 import { AppBlankComponent } from './layouts/blank/blank.component';
 import { DatosMedicosComponent } from './datos-medicos/datos-medicos.component';
 import { MisPronosticosComponent } from './mis-pronosticos/mis-pronosticos.component';
@@ -14,11 +15,13 @@ import { DiabetesComponent } from './diabetes/diabetes.component';
 import { HipertensionComponent } from './hipertension/hipertension.component';
 
 
+
 export const AppRoutes: Routes = [
     {
 
         path: '',
         component: FullComponent,
+
 
         children: [
             {
@@ -28,15 +31,26 @@ export const AppRoutes: Routes = [
             },
 
             {
+
                 path: 'dashboard',
                 redirectTo: '/dashboards/dashboard1',
-                pathMatch: 'full'
+                pathMatch: 'full',
+                data: {
+                    role: 'paciente'
+
+                }
             },
             {
+
                 path: 'dashboard2',
                 redirectTo: '/dashboards/dashboard2',
-                pathMatch: 'full'
+                pathMatch: 'full',
+                data: {
+                    role: 'medico'
+                },
+
             },
+
             {
                 path: 'dashboards',
                 loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule)
@@ -89,6 +103,7 @@ export const AppRoutes: Routes = [
             },
             {
                 path: 'usuarios', component: UsuariosComponent,
+
                 data: {
                     title: 'Mis pacientes',
                     urls: [

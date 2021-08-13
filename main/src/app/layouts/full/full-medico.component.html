@@ -1,3 +1,4 @@
+<p>full-medico works!</p>
 <!-- ============================================================== -->
 <!-- Main wrapper - style you can find in pages.scss -->
 <!-- ============================================================== -->
@@ -80,28 +81,12 @@
             (close)="sidebarOpened = false">
 
             <perfect-scrollbar *ngIf="!horizontal; else horizontalsidebar" class="scbar" [config]="config">
-                <app-vertical-sidebar class="app-sidebar" [showClass]='status' (notify)="snav.toggle()">
-                </app-vertical-sidebar>
-
-                <!-- <ng-container *ngIf="role(); then thenTemplate; else elseTemplate">
-                </ng-container>
-                <ng-template #thenTemplate>
-                    <app-vertical-sidebar class="app-sidebar" [showClass]='status' (notify)="snav.toggle()">
-                    </app-vertical-sidebar>
-                </ng-template>
-                <ng-template #elseTemplate>
-                    <app-vertical-medico class="app-sidebar" [showClass]='status' (notify)="snav.toggle()">
-                    </app-vertical-medico>
-                </ng-template>
- -->
-
+                <app-vertical-medico class="app-sidebar" [showClass]='status' (notify)="snav.toggle()">
+                </app-vertical-medico>
             </perfect-scrollbar>
 
             <ng-template #horizontalsidebar>
-
-                <app-horizontal-sidebar></app-horizontal-sidebar>
-
-                <!-- <app-horizontal-medico></app-horizontal-medico> -->
+                <app-horizontal-medico></app-horizontal-medico>
             </ng-template>
         </mat-sidenav>
 

@@ -14,7 +14,7 @@ import {
 })
 export class LoginComponent implements OnInit {
   public form: FormGroup = Object.create(null);
-
+  role = 'paciente';
   constructor(private fb: FormBuilder,
     private router: Router) { }
 
@@ -35,4 +35,9 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.router.navigate(['/dashboards/dashboard1']);
   }
+
+
+
 }
+
+
