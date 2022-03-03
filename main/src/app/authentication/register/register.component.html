@@ -1,10 +1,13 @@
-<div class="login-register" style="background-image:url(assets/images/background/profile.png);">
+<div class="login-register" style="background-image:url(assets/images/background/wave.png);">
+  <div class="container">
+    <img src="assets/images/background/register.svg">
+  </div>
   <div class="login-register-box">
     <mat-card>
       <mat-card-content>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <div class="text-center">
-            <img alt="homepage" src="assets/images/logo-icon.png">
+            <img alt="homepage" class="avatar" src="assets/images/background/profilepic2.svg">
             <h4 class="m-t-0">Regístrate</h4>
           </div>
           <div fxLayout="row wrap">
@@ -39,6 +42,21 @@
                 class="text-danger support-text">Contraseñas
                 no coinciden.</small>
             </div>
+
+            <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+              <mat-form-field>
+                <input matInput placeholder="Nombre del negocio">
+              </mat-form-field>
+            </div>
+
+            <!-- <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+              <mat-form-field style="width: 100%">
+                <input matInput placeholder="Nombre del negocio" type="text" [formControl]="form.controls['text']">
+              </mat-form-field>
+               <small *ngIf="form.controls['text'].hasError('required') && form.controls['text'].touched"
+                class="text-danger support-text">Debe incluir el nombre del negocio.</small> 
+            </div> -->
+
             <!-- col full-->
             <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
               <mat-checkbox class="font-14">Estoy de acuerdo con los términos

@@ -22,14 +22,12 @@ import { AddInvoiceComponent } from './invoice/add-invoice/add-invoice.component
 import { EditInvoiceComponent } from './invoice/edit-invoice/edit-invoice.component';
 import { TodoComponent } from './todo/todo.component';
 import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
-import { DatosMedicosComponent } from '../datos-medicos/datos-medicos.component';
-import { AntecedentesFamiliaresComponent } from './antecedentes-familiares/antecedentes-familiares.component';
-import { AntecedentesEnfermedadComponent } from './antecedentes-enfermedad/antecedentes-enfermedad.component';
-import { HistorialMedicoComponent } from './historial-medico/historial-medico.component';
-import { MisWearablesComponent } from './mis-wearables/mis-wearables.component';
-import { AgregarWearableComponent } from './agregar-wearable/agregar-wearable.component';
-import { DetalleVariableComponent } from './detalle-variable/detalle-variable.component';
-import { DetalleWearableComponent } from './detalle-wearable/detalle-wearable.component';
+import { ProductosComponent } from './productos/productos.component';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
+import { AgregarVentaComponent } from './agregar-venta/agregar-venta.component';
+
+
+
 
 
 export const AppsRoutes: Routes = [
@@ -47,93 +45,34 @@ export const AppsRoutes: Routes = [
                     ]
                 }
             },
-            {
-                path: 'datos-medicos',
-                component: DatosMedicosComponent,
-                data: {
-                    title: 'Datos Médicos',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Datos Médicos' }
-                    ]
-                }
-            },
-            {
-                path: 'antecedentes-familiares',
-                component: AntecedentesFamiliaresComponent,
-                data: {
-                    title: 'Antecedentes Familiares',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Antecedentes Familiares' }
-                    ]
-                }
-            },
-            {
-                path: 'antecedentes-enfermedades',
-                component: AntecedentesEnfermedadComponent,
-                data: {
-                    title: 'Antecedentes de Enfermedades',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Antecedentes de Enfermedades' }
-                    ]
-                }
-            },
-            {
-                path: 'historial-medico',
-                component: HistorialMedicoComponent,
-                data: {
-                    title: 'Historial Médico',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Historial Médico' }
-                    ]
-                }
-            },
 
             {
-                path: 'mis-wearables',
-                component: MisWearablesComponent,
+                path: 'productos', component: ProductosComponent,
                 data: {
-                    title: 'Mis wearables',
+                    title: 'Productos',
                     urls: [
                         { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Mis wearables' }
+                        { title: 'Productos' }
                     ]
                 }
             },
             {
-                path: 'agregar-wearable',
-                component: AgregarWearableComponent,
+                path: 'agregar-producto', component: AgregarProductoComponent,
                 data: {
-                    title: 'Agregar wearable',
+                    title: 'Agregar Producto',
                     urls: [
                         { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Agregar wearable' }
+                        { title: 'Agregar Producto' }
                     ]
                 }
             },
             {
-                path: 'detalle-variable',
-                component: DetalleVariableComponent,
+                path: 'agregar-venta', component: AgregarVentaComponent,
                 data: {
-                    title: 'Lista de Variables',
+                    title: 'Agregar venta',
                     urls: [
                         { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Lista de Variables' }
-                    ]
-                }
-            },
-
-            {
-                path: 'detalle-wearable',
-                component: DetalleWearableComponent,
-                data: {
-                    title: 'Detalles del Wearable',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Detalles del Wearable' }
+                        { title: 'Agregar venta' }
                     ]
                 }
             },
@@ -234,10 +173,10 @@ export const AppsRoutes: Routes = [
                 path: 'employeelist',
                 component: EmployeeComponent,
                 data: {
-                    title: 'Employee List',
+                    title: 'Mi personal',
                     urls: [
                         { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Employee List' }
+                        { title: 'Mi personal' }
                     ]
                 }
             },

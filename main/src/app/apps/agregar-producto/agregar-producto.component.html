@@ -1,0 +1,55 @@
+<!-- ============================================================== -->
+<!-- Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Agregar Producto</mat-card-title>
+                <!-- ============================================================== -->
+                <!-- column -->
+                <!-- ============================================================== -->
+                <form class="basic-form">
+                    <div fxLayout="row wrap">
+                        <!-- column -->
+                        <div fxFlex.gt-md="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Nombre del producto" type="text" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Cantidad" type="number" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Precio compra" type="number" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Precio venta" type="number" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <h5>Foto del producto</h5>
+                        </div>
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <input class="form-control b-b" placeholder="Foto del producto" type="file">
+                        </div>
+
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+
+                            <button mat-raised-button [routerLink]="['../productos']" color="primary">Agregar
+                                producto</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

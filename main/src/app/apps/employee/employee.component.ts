@@ -7,114 +7,94 @@ import { AddComponent } from './add/add.component';
 
 export interface Employee {
     id: number;
-    Name: string;
-    Position: string;
-    Email: string;
-    Mobile: number;
-    DateOfJoining: Date;
-    Salary: number;
-    Projects: number;
+    Nombre: string;
+    Apellidos: string;
+    Telefono: string;
+    Correo: string;
+    Sueldo: number;
     imagePath: string;
 }
 
 const employees = [
     {
         id: 1,
-        Name: 'Johnathan Deo',
-        Position: 'Seo Expert',
-        Email: 'r@gmail.com',
-        Mobile: 9786838,
-        DateOfJoining: new Date('01-2-2020'),
-        Salary: 12000,
-        Projects: 10,
+        Nombre: 'Johnathan',
+        Apellidos: 'Deo',
+        Telefono: '9786838',
+        Correo: 'r@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/2.jpg'
     },
     {
         id: 2,
-        Name: 'Mark Zukerburg',
-        Position: 'Web Developer',
-        Email: 'mark@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('04-2-2020'),
-        Salary: 12000,
-        Projects: 10,
+        Nombre: 'Mark',
+        Apellidos: 'Zukerburg',
+        Telefono: '9786838',
+        Correo: 'mark@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/3.jpg'
     },
     {
         id: 3,
-        Name: 'Sam smith',
-        Position: 'Web Designer',
-        Email: 'sam@gmail.com',
-        Mobile: 7788838,
-        DateOfJoining: new Date('02-2-2020'),
-        Salary: 12000,
-        Projects: 10,
+        Nombre: 'Sam',
+        Apellidos: 'Smith',
+        Telefono: '9786838',
+        Correo: 'r@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/4.jpg'
     },
     {
         id: 4,
-        Name: 'John Deo',
-        Position: 'Tester',
-        Email: 'john@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('03-2-2020'),
-        Salary: 12000,
-        Projects: 11,
+        Nombre: 'Nathan',
+        Apellidos: 'Deo',
+        Telefono: '9786838',
+        Correo: 'n@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/5.jpg'
     },
     {
         id: 5,
-        Name: 'Genilia',
-        Position: 'Actor',
-        Email: 'genilia@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('05-2-2020'),
-        Salary: 12000,
-        Projects: 19,
+        Nombre: 'Genilia',
+        Apellidos: 'Min',
+        Telefono: '9786838',
+        Correo: 'genilia@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/6.jpg'
     },
     {
         id: 6,
-        Name: 'Jack Sparrow',
-        Position: 'Content Writer',
-        Email: 'jac@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('05-21-2020'),
-        Salary: 12000,
-        Projects: 5,
+        Nombre: 'Jack',
+        Apellidos: 'Sparrow',
+        Telefono: '9786838',
+        Correo: 'jack@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/7.jpg'
     },
     {
         id: 7,
-        Name: 'Tom Cruise',
-        Position: 'Actor',
-        Email: 'tom@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('02-15-2019'),
-        Salary: 12000,
-        Projects: 9,
+        Nombre: 'Jack',
+        Apellidos: 'Sparrow',
+        Telefono: '9786838',
+        Correo: 'jack@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/3.jpg'
     },
     {
         id: 8,
-        Name: 'Hary Porter',
-        Position: 'Actor',
-        Email: 'hary@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('07-3-2019'),
-        Salary: 12000,
-        Projects: 7,
+        Nombre: 'Manila',
+        Apellidos: 'Baez',
+        Telefono: '9786838',
+        Correo: 'man@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/6.jpg'
     },
     {
         id: 9,
-        Name: 'Kristen Ronaldo',
-        Position: 'Player',
-        Email: 'kristen@gmail.com',
-        Mobile: 8786838,
-        DateOfJoining: new Date('01-15-2019'),
-        Salary: 12000,
-        Projects: 1,
+        Nombre: 'Kristen',
+        Apellidos: 'Jules',
+        Telefono: '9786838',
+        Correo: 'kris@gmail.com',
+        Sueldo: 1000,
         imagePath: 'assets/images/users/5.jpg'
     }
 ];
@@ -129,7 +109,7 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
 
     @ViewChild(MatTable, { static: true }) table: MatTable<any> = Object.create(null);
     searchText: any;
-    displayedColumns: string[] = ['#', 'name', 'email', 'mobile', 'date of joining', 'salary', 'projects', 'action'];
+    displayedColumns: string[] = ['#', 'nombre', 'apellidos', 'telefono', 'correo', 'sueldo', 'action'];
     dataSource = new MatTableDataSource(employees);
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator = Object.create(null);
 
@@ -152,11 +132,11 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
             data: obj
         });
         dialogRef.afterClosed().subscribe(result => {
-            if (result.event === 'Add') {
+            if (result.event === 'Agregar') {
                 this.addRowData(result.data);
-            } else if (result.event === 'Update') {
+            } else if (result.event === 'Actualizar') {
                 this.updateRowData(result.data);
-            } else if (result.event === 'Delete') {
+            } else if (result.event === 'Eliminar') {
                 this.deleteRowData(result.data);
             }
         });
@@ -166,14 +146,11 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
     addRowData(row_obj: Employee): void {
         this.dataSource.data.push({
             id: employees.length + 1,
-            Name: row_obj.Name,
-            Position: row_obj.Position,
-            Email: row_obj.Email,
-            Mobile: row_obj.Mobile,
-
-            DateOfJoining: new Date(),
-            Salary: row_obj.Salary,
-            Projects: row_obj.Projects,
+            Nombre: row_obj.Nombre,
+            Apellidos: row_obj.Apellidos,
+            Telefono: row_obj.Telefono,
+            Correo: row_obj.Correo,
+            Sueldo: row_obj.Sueldo,
             imagePath: row_obj.imagePath
         });
         this.dialog.open(AddComponent);
@@ -184,13 +161,11 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
     updateRowData(row_obj: Employee): boolean | any {
         this.dataSource.data = this.dataSource.data.filter((value: any) => {
             if (value.id === row_obj.id) {
-                value.Name = row_obj.Name;
-                value.Position = row_obj.Position;
-                value.Email = row_obj.Email;
-                value.Mobile = row_obj.Mobile;
-                value.DateOfJoining = row_obj.DateOfJoining;
-                value.Salary = row_obj.Salary;
-                value.Projects = row_obj.Projects;
+                value.Nombre = row_obj.Nombre;
+                value.Apellidos = row_obj.Apellidos;
+                value.Telefono = row_obj.Telefono;
+                value.Correo = row_obj.Correo;
+                value.Sueldo = row_obj.Sueldo;
                 value.imagePath = row_obj.imagePath;
             }
             return true;
@@ -226,9 +201,9 @@ export class EmployeeDialogContent {
         @Optional() @Inject(MAT_DIALOG_DATA) public data: Employee) {
         this.local_data = { ...data };
         this.action = this.local_data.action;
-        if (this.local_data.DateOfJoining !== undefined) {
+        /* if (this.local_data.DateOfJoining !== undefined) {
             this.joiningDate = this.datePipe.transform(new Date(this.local_data.DateOfJoining), 'yyyy-MM-dd');
-        }
+        } */
         if (this.local_data.imagePath === undefined) {
             this.local_data.imagePath = 'assets/images/users/default.png';
         }

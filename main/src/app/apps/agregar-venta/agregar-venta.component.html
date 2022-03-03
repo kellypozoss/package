@@ -1,0 +1,46 @@
+<!-- ============================================================== -->
+<!-- Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Agregar Venta</mat-card-title>
+                <!-- ============================================================== -->
+                <!-- column -->
+                <!-- ============================================================== -->
+                <form class="basic-form">
+                    <div fxLayout="row wrap">
+                        <!-- column -->
+                        <div fxFlex.gt-md="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Nombre del producto" type="text" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Cantidad" type="number" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="Precio" type="number">
+                            </mat-form-field>
+                        </div>
+
+
+
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+
+                            <button mat-raised-button [routerLink]="['../historial-ventas']" color="primary">Agregar
+                                venta</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

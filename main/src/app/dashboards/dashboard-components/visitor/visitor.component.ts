@@ -16,7 +16,17 @@ import {
   ApexResponsive
 } from 'ng-apexcharts';
 
+import * as Chartist from 'chartist';
+import { ChartType, ChartEvent } from 'ng-chartist';
 
+
+export interface Chart {
+  type: ChartType;
+  data: Chartist.IChartistData;
+  options?: any;
+  responsiveOptions?: any;
+  events?: ChartEvent;
+}
 
 export interface VisitorChartOptions {
   series: ApexNonAxisChartSeries;
@@ -47,6 +57,8 @@ export class VisitorComponent implements OnInit {
     responsive: true,
     barThickness: 10
   };
+
+
 
   // lineChart
   public lineChartData: Array<any> = [
@@ -105,6 +117,75 @@ export class VisitorComponent implements OnInit {
     ];
 
   }
+
+
+  constructor() {
+    this.lineChartOptions = {
+      series: [
+        {
+          name: 'Clicked',
+          data: [10, 20, 30, 40, 50]
+        },
+        {
+          name: 'Sent',
+          data: [10, 20, 30, 40, 50]
+        }
+      ],
+      chart: {
+        height: 290,
+        fontFamily: 'Poppins,sans-serif',
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      markers: {
+        size: 3,
+      },
+      stroke: {
+        curve: 'smooth',
+        width: '2'
+      },
+      colors: ['#40DECE', '#1e88e5'],
+      legend: {
+        show: false,
+      },
+      grid: {
+        borderColor: 'rgba(0,0,0,.2)',
+        strokeDashArray: 3,
+        yaxis: {
+          lines: {
+            show: true
+          }
+        },
+        xaxis: {
+          lines: {
+            show: true
+          }
+        },
+      },
+      xaxis: {
+        type: 'category',
+        categories: [
+          'Enero',
+          'Febrero',
+          'Marzo',
+          'Abril',
+          'Mayo',
+          'Junio',
+          'Julio'
+
+        ]
+      },
+      tooltip: {
+        theme: 'light',
+        x: {
+          format: 'dd/MM/yy HH:mm'
+        }
+      }
+    };
+  }
+
 
   ngOnInit(): void {
   }

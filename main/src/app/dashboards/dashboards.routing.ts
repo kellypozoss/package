@@ -13,8 +13,7 @@ export const DashboardsRoutes: Routes = [
         data: {
           title: 'Dashboard',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: ' Paciente' }
+            { url: '/dashboard' }
           ]
         }
       },

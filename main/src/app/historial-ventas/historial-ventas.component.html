@@ -1,0 +1,83 @@
+<div fxLayout="row wrap">
+    <div fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <div fxLayout="row wrap" class="align-items-center">
+                    <div fxFlex.gt-md="25" fxFlex.gt-lg="25" fxFlex="100">
+                        <mat-form-field>
+                            <input matInput (keyup)="applyFilter($event.target.value)"
+                                placeholder="Buscar venta (Fecha)" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex.gt-md="75" class="text-right">
+                        <a class="pointer" (click)="downloadPDF()" style="color: rgb(192, 58, 34)"
+                            matTooltip="Descargar historial">
+
+                            <img class="icon" src="assets/images/pdf-icon.png">
+                        </a>
+                        <a class="pointer" style="color: #3a69a7;" matTooltip="Exportar excel">
+                            <img class="icon" src="assets/images/excel-icon.png">
+                        </a>
+                        <br>
+                        <br>
+                        <button mat-raised-button (click)="openDialog('Agregar',{})" color="primary">Agregar
+                            Venta</button>
+
+
+
+
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div fxLayout="row wrap">
+    <div fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <div class="table-responsive">
+                    <table mat-table [dataSource]="dataSource" class="table employee-list no-wrap">
+
+                        <ng-container matColumnDef="#">
+                            <th mat-header-cell *matHeaderCellDef> # </th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="fecha">
+                            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                            <td mat-cell *matCellDef="let element"> {{element.fecha | date :'fullDate'}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="producto">
+                            <th mat-header-cell *matHeaderCellDef> Producto</th>
+                            <td mat-cell *matCellDef="let element"> {{element.producto}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="cantidad">
+                            <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                            <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="precio_v">
+                            <th mat-header-cell *matHeaderCellDef> Precio </th>
+                            <td mat-cell *matCellDef="let element"> {{element.precio_v}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell *matHeaderCellDef> Opciones </th>
+                            <td mat-cell *matCellDef="let element" class="action-link">
+                                <a (click)="openDialog('Actualizar',element)" class="m-r-10 cursor-pointer"><i
+                                        class="fa fa-pencil"></i></a>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

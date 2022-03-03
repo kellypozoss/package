@@ -1,10 +1,13 @@
-<div class="login-register" style="background-image:url(assets/images/background/profile.png);">
+<div class="login-register" style="background-image:url(assets/images/background/wave.png);">
+  <div class="container">
+    <img src="assets/images/background/forgot.svg">
+  </div>
   <div class="login-register-box">
     <mat-card>
       <mat-card-content>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <div class="text-center">
-            <img alt="homepage" src="assets/images/logo-icon.png">
+            <img alt="homepage" class="avatar" src="assets/images/background/profilepic2.svg">
             <h4 class="m-t-0">Recuperar contraseña</h4>
           </div>
           <p class="text-center font-14">Entra a tu correo y te enviaremos el link para resetear tu contraseña.</p>

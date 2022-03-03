@@ -7,11 +7,11 @@ import {
 	OnInit
 } from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
-import { MenuItemsMedico } from '../../shared/menu-items/menu-items-medico';
+
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { LoginComponent } from '../../authentication/login/login.component';
-import { MedicoLoginComponent } from '../../authentication/medico-login/medico-login.component';
+
 
 /** @title Responsive sidenav */
 @Component({
@@ -29,7 +29,7 @@ export class FullComponent implements OnDestroy {
 	boxed = false;
 	horizontal = false;
 
-	//recuperar role del los logins
+
 
 	green = false;
 	blue = false;
@@ -48,8 +48,7 @@ export class FullComponent implements OnDestroy {
 		public router: Router,
 		changeDetectorRef: ChangeDetectorRef,
 		media: MediaMatcher,
-		public menuItems: MenuItems,
-		public menuItemsMedico: MenuItemsMedico
+		public menuItems: MenuItems
 	) {
 		this.mobileQuery = media.matchMedia('(min-width: 1023px)');
 		this._mobileQueryListener = () => changeDetectorRef.detectChanges();

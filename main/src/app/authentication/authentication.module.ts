@@ -25,7 +25,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { MedicoLoginComponent } from './medico-login/medico-login.component';
+
 
 @NgModule({
     imports: [
@@ -46,8 +46,7 @@ import { MedicoLoginComponent } from './medico-login/medico-login.component';
         ForgotComponent,
         LockscreenComponent,
         LoginComponent,
-        RegisterComponent,
-        MedicoLoginComponent
+        RegisterComponent
     ]
 })
 export class AuthenticationModule { }

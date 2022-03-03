@@ -45,11 +45,11 @@ export class NewsletterComponent implements OnInit {
             series: [
                 {
                     name: 'Clicked',
-                    data: [3000, 5000, 15000, 8000, 15000, 9000, 30000, 3000]
+                    data: [10, 20, 30, 40, 50]
                 },
                 {
                     name: 'Sent',
-                    data: [2000, 3000, 5000, 2000, 8000, 1000, 5000, 2000]
+                    data: [10, 20, 30, 40, 50]
                 }
             ],
             chart: {
@@ -88,13 +88,13 @@ export class NewsletterComponent implements OnInit {
             xaxis: {
                 type: 'category',
                 categories: [
-                    'Lunes',
-                    'Martes',
-                    'Miércoles',
-                    'Jueves',
-                    'Viernes',
-                    'Sábado',
-                    'Domingo'
+                    'Enero',
+                    'Febrero',
+                    'Marzo',
+                    'Abril',
+                    'Mayo',
+                    'Junio',
+                    'Julio'
 
                 ]
             },

@@ -1,18 +1,18 @@
 import { Routes } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
-import { FullMedicoComponent } from './layouts/full/full-medico.component';
 import { AppBlankComponent } from './layouts/blank/blank.component';
-import { DatosMedicosComponent } from './datos-medicos/datos-medicos.component';
-import { MisPronosticosComponent } from './mis-pronosticos/mis-pronosticos.component';
-import { VariablesBiomedicasComponent } from './variables-biomedicas/variables-biomedicas.component';
 import { GeneratePdfComponent } from './generate-pdf/generate-pdf.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { MedicosComponent } from './medicos/medicos.component';
-import { HospitalesComponent } from './hospitales/hospitales.component';
-import { CardiovascularComponent } from './cardiovascular/cardiovascular.component';
-import { DiabetesComponent } from './diabetes/diabetes.component';
-import { HipertensionComponent } from './hipertension/hipertension.component';
+import { EmpresaComponent } from './empresa/empresa.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { RecomendacionesEstadisticasComponent } from './recomendaciones-estadisticas/recomendaciones-estadisticas.component';
+import { AnalisisVentaComponent } from './analisis-venta/analisis-venta.component';
+import { AgregarProductoComponent } from './apps/agregar-producto/agregar-producto.component';
+import { EditarEmpresaComponent } from './editar-empresa/editar-empresa.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { EditarEmpresa2Component } from './editar-empresa2/editar-empresa2.component';
+import { HistorialVentasComponent } from './historial-ventas/historial-ventas.component';
+
 
 
 
@@ -26,8 +26,9 @@ export const AppRoutes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: '/authentication/inicio',
-                pathMatch: 'full'
+                redirectTo: '/authentication/login',
+                pathMatch: 'full',
+
             },
 
             {
@@ -35,19 +36,14 @@ export const AppRoutes: Routes = [
                 path: 'dashboard',
                 redirectTo: '/dashboards/dashboard1',
                 pathMatch: 'full',
-                data: {
-                    role: 'paciente'
 
-                }
             },
             {
 
                 path: 'dashboard2',
                 redirectTo: '/dashboards/dashboard2',
                 pathMatch: 'full',
-                data: {
-                    role: 'medico'
-                },
+
 
             },
 
@@ -71,26 +67,7 @@ export const AppRoutes: Routes = [
                 path: 'tables',
                 loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule)
             },
-            {
-                path: 'mis-pronosticos', component: MisPronosticosComponent,
-                data: {
-                    title: 'Mis pronósticos',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Mis pronósticos' }
-                    ]
-                }
-            },
-            {
-                path: 'variables-biomedicas', component: VariablesBiomedicasComponent,
-                data: {
-                    title: 'Variables biomédicas',
-                    urls: [
-                        { title: 'Dashboard', url: '/dashboard' },
-                        { title: 'Variables biomédicas' }
-                    ]
-                }
-            },
+
             {
                 path: 'generate-pdf', component: GeneratePdfComponent,
                 data: {
@@ -101,67 +78,84 @@ export const AppRoutes: Routes = [
                     ]
                 }
             },
-            {
-                path: 'usuarios', component: UsuariosComponent,
 
+            {
+                path: 'historial-ventas', component: HistorialVentasComponent,
                 data: {
-                    title: 'Mis pacientes',
+                    title: 'Historial de ventas',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Mis pacientes' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Historial de ventas' }
                     ]
                 }
             },
             {
-                path: 'medicos', component: MedicosComponent,
+                path: 'empresa', component: EmpresaComponent,
                 data: {
-                    title: 'Médicos',
+                    title: 'Empresa',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Médicos' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Empresa' }
                     ]
                 }
             },
             {
-                path: 'hospitales', component: HospitalesComponent,
+                path: 'editar-empresa2', component: EditarEmpresa2Component,
                 data: {
-                    title: 'Hospitales',
+                    title: 'Editar Empresa',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Hospitales' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Editar Empresa' }
                     ]
                 }
             },
+
             {
-                path: 'cardiovascular', component: CardiovascularComponent,
+                path: 'editar-perfil', component: EditarPerfilComponent,
                 data: {
-                    title: 'Enfermedades cardiovasculares',
+                    title: 'Editar Perfil',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Enfermedades cardiovasculares' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Editar Perfil' }
                     ]
                 }
             },
+
             {
-                path: 'diabetes', component: DiabetesComponent,
+                path: 'analisis-venta', component: AnalisisVentaComponent,
                 data: {
-                    title: 'Diabetes',
+                    title: 'Análisis de ventas',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Diabetes' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Análisis de ventas' }
                     ]
                 }
             },
+
+
             {
-                path: 'hipertension', component: HipertensionComponent,
+                path: 'recomendaciones-estadisticas', component: RecomendacionesEstadisticasComponent,
                 data: {
-                    title: 'Hipertensión',
+                    title: 'Recomendaciones estadísticas',
                     urls: [
-                        { title: 'Dashboard', url: '/dashboard2' },
-                        { title: 'Hipertensión' }
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Recomendaciones estadísticas' }
                     ]
                 }
             },
+
+            {
+                path: 'perfil', component: PerfilComponent,
+                data: {
+                    title: 'Perfil',
+                    urls: [
+                        { title: 'Dashboard', url: '/dashboard' },
+                        { title: 'Perfil' }
+                    ]
+                }
+            },
+
+
             {
                 path: 'tree',
                 loadChildren: () => import('./tree/tree.module').then(m => m.TreeModule)

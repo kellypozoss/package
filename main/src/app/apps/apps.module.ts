@@ -21,6 +21,7 @@ import { ChatComponent } from './chat/chat.component';
 import { DialogContent } from './contact/contact.component';
 import { TicketDialogContent } from './ticketlist/ticketlist.component';
 import { EmployeeDialogContent } from './employee/employee.component';
+import { ProductoDialogContent, ProductosComponent } from './productos/productos.component';
 
 import { CoursesComponent } from './courses/courses.component';
 import { CourseService } from './courses/course.service';
@@ -46,6 +47,7 @@ import { TodoService } from './todo/todo.service';
 import { OkDialogComponent } from './invoice/edit-invoice/ok-dialog/ok-dialog.component';
 import { AddedDialogComponent } from './invoice/add-invoice/added-dialog/added-dialog.component';
 import { AddComponent } from './employee/add/add.component';
+import { AddProductoComponent } from './productos/add-producto/add-producto.component';
 
 import { CalendarFormDialogComponent } from './fullcalendar/calendar-form-dialog/calendar-form-dialog.component';
 
@@ -75,7 +77,6 @@ import { StickyheaderfooterTableComponent } from '../tables/sticky-header-footer
 import { BasicTableComponent } from '../tables/basic-table/basic-table.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { DetalleWearableComponent } from './detalle-wearable/detalle-wearable.component';
 
 
 
@@ -136,7 +137,11 @@ import { DetalleWearableComponent } from './detalle-wearable/detalle-wearable.co
         TaskDialogComponent,
         OkTaskComponent,
         DeleteTaskComponent,
-        DetalleWearableComponent,
+        ProductosComponent,
+        ProductoDialogContent,
+        AddProductoComponent,
+
+
 
 
 
@@ -155,9 +160,11 @@ import { DetalleWearableComponent } from './detalle-wearable/detalle-wearable.co
         DialogContent,
         TicketDialogContent,
         EmployeeDialogContent,
+        ProductoDialogContent,
         OkDialogComponent,
         AddedDialogComponent,
         AddComponent,
+        AddProductoComponent,
         CalendarFormDialogComponent,
         TaskDialogComponent,
         OkTaskComponent,

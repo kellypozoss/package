@@ -33,58 +33,50 @@ export interface Menu {
 const MENUITEMS = [
     {
         state: '',
-        name: 'Pacientes',
+        name: 'Análisis',
         type: 'saperator',
         icon: 'av_timer'
     },
     {
         state: 'dashboards',
-        name: 'Panel Paciente',
+        name: 'Panel Principal',
         type: 'sub',
         icon: 'av_timer',
         children: [
-            { state: 'dashboard1', name: 'Panel Paciente', type: 'link' }
+            { state: 'dashboard1', name: 'Panel Principal', type: 'link' }
 
         ]
     },
     {
-        state: 'apps',
-        name: 'Datos Médicos',
-        type: 'sub',
-        icon: 'apps',
+        state: 'analisis-venta',
+        name: 'Análisis de ventas',
+        type: 'link',
+        icon: 'show_chart'
 
-        children: [
-            { state: 'datos-medicos', name: 'Datos Médicos', type: 'link' },
-            { state: 'antecedentes-familiares', name: 'Antecedentes familiares', type: 'link' },
-            { state: 'antecedentes-enfermedades', name: 'Antecedentes de enfermedades', type: 'link' },
-            { state: 'historial-medico', name: 'Historial Médico', type: 'link' },
-
-        ]
+    },
+    {
+        state: 'historial-ventas',
+        name: 'Historial de ventas',
+        type: 'link',
+        icon: 'apps'
     },
     {
         state: 'apps',
-        name: 'Mis Wearables',
+        name: 'Productos',
         type: 'sub',
         icon: 'bubble_chart',
 
         children: [
-            { state: 'mis-wearables', name: 'Mis wearables', type: 'link' },
-            { state: 'agregar-wearable', name: 'Agregar wearable', type: 'link' }
+            { state: 'productos', name: 'Productos', type: 'link' }
+
 
         ]
     },
 
     {
-        state: 'mis-pronosticos',
-        name: 'Mis pronósticos',
-        type: 'link',
-        icon: 'brightness_7'
 
-    },
-    {
-
-        state: 'variables-biomedicas',
-        name: 'Mis variables biomédicas',
+        state: 'recomendaciones-estadisticas',
+        name: 'Recomendaciones estadísticas',
         type: 'link',
         icon: 'insert_drive_file'
 

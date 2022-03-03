@@ -27,7 +27,7 @@ import { DOCUMENT } from '@angular/common';
 export class SpinnerComponent implements OnDestroy {
   public isSpinnerVisible = true;
 
-  @Input() public backgroundColor = 'rgba(0, 58, 167, 72)';
+  @Input() public backgroundColor = 'rgba(66, 135, 168, 1)';
 
   constructor(
     private router: Router,

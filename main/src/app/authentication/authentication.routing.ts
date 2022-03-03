@@ -5,39 +5,42 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { MedicoLoginComponent } from './medico-login/medico-login.component';
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
     children: [
       {
         path: '404',
-        component: ErrorComponent
+        component: ErrorComponent,
+        data: {
+          title: 'Smart Commerce'
+        }
       },
       {
         path: 'forgot',
-        component: ForgotComponent
+        component: ForgotComponent,
+        data: {
+          title: 'Smart Commerce'
+        }
       },
       {
         path: 'lockscreen',
-        component: LockscreenComponent
+        component: LockscreenComponent,
+        data: {
+          title: 'Smart Commerce'
+        }
       },
       {
         path: 'login',
         component: LoginComponent
-      },
-      {
-        path: 'medico-login',
-        component: MedicoLoginComponent
+
       },
       {
         path: 'register',
-        component: RegisterComponent
-      },
-      {
-        path: 'inicio',
-        component: InicioComponent
+        component: RegisterComponent,
+        data: {
+          title: 'Smart Commerce'
+        }
       }
     ]
   }

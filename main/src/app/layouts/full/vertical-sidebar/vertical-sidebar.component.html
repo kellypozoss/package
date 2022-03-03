@@ -1,32 +1,37 @@
 <!-- ============================================================== -->
 <!-- sidebar -->
 <!-- ============================================================== editar imagenes -->
-<div class="user-profile" style="background: url(assets/images/background/1111.jpg) no-repeat;">
+<div class="user-profile" style="background: url(assets/images/background/wave.png) no-repeat;">
     <!-- User profile image -->
     <div class="profile-img">
-        <img src="assets/images/users/perfil.jpg" alt="user" (click)="handleNotify()">
+        <img src="assets/images/users/avatar.svg" alt="user" (click)="handleNotify()">
     </div>
     <!-- User profile text-->
     <!-- ============================================================== -->
     <!-- Profile - style you can find in header.scss -->
     <!-- ============================================================== -->
     <div class="profile-text">
-        <a [matMenuTriggerFor]="sdprofile" class=""> Kelly Pozos
+        <a [matMenuTriggerFor]="sdprofile" class=""> Angela Dominic
             <i class="ti-angle-down font-12 m-l-5"></i>
         </a>
     </div>
     <mat-menu #sdprofile="matMenu" class="mymegamenu">
-        <button mat-menu-item>
-            <mat-icon>settings</mat-icon> Configuración
-        </button>
-        <button mat-menu-item>
+        <button mat-menu-item [routerLink]="['../perfil']">
             <mat-icon>account_box</mat-icon> Perfil
+        </button>
+        <button mat-menu-item [routerLink]="['../empresa']">
+            <mat-icon>business</mat-icon> Empresa
+        </button>
+        <button mat-menu-item [routerLink]="['../apps/employeelist']">
+            <mat-icon>group</mat-icon> Personal
         </button>
         <button mat-menu-item [routerLink]="['/authentication/login']">
             <mat-icon>exit_to_app</mat-icon>Cerrar sesión
 
         </button>
     </mat-menu>
+
+
 </div>
 
 <mat-nav-list appAccordion>

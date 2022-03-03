@@ -4,13 +4,15 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
+  NgForm,
   FormControl
 } from '@angular/forms';
 import { CustomValidators } from 'ngx-custom-validators';
-
+import { take } from 'rxjs/operators';
 
 const password = new FormControl('', Validators.required);
 const confirmPassword = new FormControl('', CustomValidators.equalTo(password));
+
 
 @Component({
   selector: 'app-register',
